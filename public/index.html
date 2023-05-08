@@ -32,7 +32,37 @@
 			<button type="submit" id="play" onclick="playGame()">Play</button>
     		<button type="submit" id="startover" onclick="startOver()">Start Over</button>
 		</form>
-		<br><br>
-  
-    </body>
+		<br>
+        <br>
+        <br>
+    
+        <p class="hide" id="you"></p>
+        <p class="hide" id="game_opponent"></p>
+	    <p class="hide" id="game_result"></p>
+        <button class="hide" type="button" id="startover2" onclick="startOver()">Start Over</button>
+        <br>
+
+	    <button type="button" id="rulesPopup" onclick="showRules()">Rules</button>
+	    <p class="hide" id="rps_rules">
+        Rules for Rock Paper Scissors:
+		- Scissors CUTS Paper
+		- Paper COVERS Rock
+		- Rock CRUSHES Scissors</p>
+	    <p class="hide" id="rpsls_rules">
+        Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
+
+		- Scissors CUTS Paper
+		- Paper COVERS Rock
+		- Rock SMOOSHES Lizard
+		- Lizard POISONS Spock
+		- Spock SMASHES Scissors
+		- Scissors DECAPITATES Lizard
+		- Lizard EATS Paper
+		- Paper DISPROVES Spock
+		- Spock VAPORIZES Rock
+		- Rock CRUSHES Scissors</p>
+	<button class="hide" type="button" id="close" onclick="closeRules()">Close Rules</button>
+
+
+  </body>
 </html>
