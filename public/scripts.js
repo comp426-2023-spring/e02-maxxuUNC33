@@ -59,5 +59,8 @@ async function playGame() {
     $("#game_result").html("Result: " + result.result);
 }
 
-
+$(document).ready(function() {
+    resetGame();
+    toggleShotsVisibility();
+});
 
