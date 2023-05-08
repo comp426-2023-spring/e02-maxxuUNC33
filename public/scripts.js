@@ -54,10 +54,4 @@ async function playGame() {
     $("#game_result").html("Result: " + result.result);
 }
 
-function displayRules() {
-    $("#rps_rules, #rpsls_rules, #close").css("visibility", "visible");
-}
 
-function hideRules() {
-    $("#rps_rules, #rpsls_rules, #close").css("visibility", "hidden");
-}
