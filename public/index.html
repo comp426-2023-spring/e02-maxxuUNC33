@@ -1,14 +1,11 @@
 <html lang="en">
     <head>
         <title>Max Xu's Game on</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script type="module" src="./scripts.js"></script>
     </head>
-    <body>
+     <body>
         <form id="userinput" class="form">
             <h1 id="header">Play a Game!</h1>
                 <input type="radio" id="rps" name="game" value="rps" checked onclick="toggleShotsVisibility()">
@@ -31,9 +28,9 @@
                 <input type="radio" id="spock" name="shot" value="spock" class="rpsls shots">
                 <label class="shots rpsls" id="spock_label">Spock</label>
 			<br><br>
-            <button type="submit" id="play" onclick="playGame()">Play</button>
-            <button type="button" id="startover" onclick="resetGame()">Start Over</button>
-        </form>
+			<button type="submit" id="play" onclick="playGame()">Play</button>
+    		<button type="submit" id="startover" onclick="resetGame()">Start Over</button>
+		</form>
         <p class="hide" id="you"></p>
         <p class="hide" id="game_opponent"></p>
 	    <p class="hide" id="game_result"></p>
