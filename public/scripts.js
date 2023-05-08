@@ -1,3 +1,6 @@
+import { rps, rpsls } from './lib/rpsls.js';
+
+
 let isResultVisible;
 
 function toggleShotsVisibility() {
@@ -36,14 +39,16 @@ function updateResultsVisibility() {
         elementsToToggle.css("visibility", "hidden");
     }
 }
-
 async function playGame() {
     const game = $('input[type=radio][name=game]:checked').val();
     const shot = $('input[type=radio][name=shot]:checked').val();
-    const baseUrl = window.location.href + 'app/';
-    const url = baseUrl + game + '/play/' + shot;
-    const response = await fetch(url);
-    const result = await response.json();
+    let result;
+
+    if (game === 'rps') {
+        result = rps(shot);
+    } else {
+        result = rpsls(shot);
+    }
 
     $("#userinput").hide();
     isResultVisible = true;
@@ -53,5 +58,6 @@ async function playGame() {
     $("#game_opponent").html("Opponent: " + result.opponent);
     $("#game_result").html("Result: " + result.result);
 }
+
 
 
